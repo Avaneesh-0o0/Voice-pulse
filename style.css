@@ -1,0 +1,236 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Light background */
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background: #4caf50;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header Section */
+  header {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Features Section */
+  section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  section ul {
+    list-style: square;
+    margin-left: 20px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Contact Form */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    margin-top: 15px;
+  }
+  /* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Add glow effect for text in dark mode */
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode p,
+  body.dark-mode a,
+  body.dark-mode button {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
+  }
+  
+  /* Light mode styles */
+  body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Glow effect for buttons in dark mode */
+  body.dark-mode button {
+    background-color: #00ffcc;
+    border: 2px solid #ffffff;
+    color: #000000;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffcc;
+  }
+  
+  body.dark-mode button:hover {
+    background-color: #ffffff;
+    color: #00ffcc;
+  }
+  
+  /* Additional styles for nav, lists, etc. */
+  nav {
+    background-color: var(--accent-color, #007bff);
+    padding: 10px;
+    color: #fff;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #00ffcc;
+  }
+  .app-controls {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .app-controls button {
+    background-color: var(--accent-color, #28a745);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .app-controls button:hover {
+    background-color: #218838;
+  }
+.voice-search {
+  margin-top: 20px;
+}
+
+.voice-search button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voice-search button:hover {
+  background-color: #45a049;
+}
+.ai-answer-base {
+    margin-top: 20px;
+  }
+  
+  .ai-answer-base button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .ai-answer-base button:hover {
+    background-color: #005f6b;
+  }
+  
+  #ai-answer {
+    font-size: 16px;
+    color: #333;
+  }
+  
