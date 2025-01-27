@@ -249,58 +249,58 @@ function startAIAnswerBase() {
 }
 
 // Attach the function to the button
-document.getElementById('activate-ai-answer').addEventListener('click', startAIAnswerBase);
-// Voice AI Answer Base
-function startAIAnswerBase() {
-    if ('webkitSpeechRecognition' in window) {
-      const recognition = new webkitSpeechRecognition();
-      recognition.lang = 'en-US';
-      recognition.interimResults = false;
-      recognition.continuous = false;
+// document.getElementById('activate-ai-answer').addEventListener('click', startAIAnswerBase);
+// // Voice AI Answer Base
+// function startAIAnswerBase() {
+//     if ('webkitSpeechRecognition' in window) {
+//       const recognition = new webkitSpeechRecognition();
+//       recognition.lang = 'en-US';
+//       recognition.interimResults = false;
+//       recognition.continuous = false;
   
-      recognition.start();
+//       recognition.start();
   
-      recognition.onresult = (event) => {
-        const userQuery = event.results[0][0].transcript.toLowerCase();
-        console.log(`User asked: ${userQuery}`);
+//       recognition.onresult = (event) => {
+//         const userQuery = event.results[0][0].transcript.toLowerCase();
+//         console.log(`User asked: ${userQuery}`);
   
-        // Show loading message
-        const answerDiv = document.getElementById('ai-answer');
-        answerDiv.textContent = 'Processing...';
+//         // Show loading message
+//         const answerDiv = document.getElementById('ai-answer');
+//         answerDiv.textContent = 'Processing...';
   
-        // Send query to backend
-        fetch('http://127.0.0.1:5000/get-answer', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ query: userQuery }),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.answer) {
-              answerDiv.textContent = `AI: ${data.answer}`;
-            } else {
-              answerDiv.textContent = `Error: ${data.error}`;
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-            answerDiv.textContent = 'Error connecting to AI backend.';
-          });
-      };
+//         // Send query to backend
+//         fetch('http://127.0.0.1:5000/get-answer', {
+//           method: 'POST',
+//           headers: {
+//             'Content-Type': 'application/json',
+//           },
+//           body: JSON.stringify({ query: userQuery }),
+//         })
+//           .then((response) => response.json())
+//           .then((data) => {
+//             if (data.answer) {
+//               answerDiv.textContent = `AI: ${data.answer}`;
+//             } else {
+//               answerDiv.textContent = `Error: ${data.error}`;
+//             }
+//           })
+//           .catch((error) => {
+//             console.error('Error:', error);
+//             answerDiv.textContent = 'Error connecting to AI backend.';
+//           });
+//       };
   
-      recognition.onerror = (event) => {
-        console.error('Speech recognition error:', event);
-        alert('Error occurred in speech recognition. Please try again.');
-      };
-    } else {
-      alert('Your browser does not support speech recognition.');
-    }
-  }
+//       recognition.onerror = (event) => {
+//         console.error('Speech recognition error:', event);
+//         alert('Error occurred in speech recognition. Please try again.');
+//       };
+//     } else {
+//       alert('Your browser does not support speech recognition.');
+//     }
+//   }
   
-  // Attach the function to the button
-  document.getElementById('activate-ai-answer').addEventListener('click', startAIAnswerBase);
+//   // Attach the function to the button
+//   document.getElementById('activate-ai-answer').addEventListener('click', startAIAnswerBase);
     
 
 
