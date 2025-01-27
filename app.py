@@ -6,7 +6,7 @@ app = Flask(__name__)
 CORS(app)  # Allow cross-origin requests
 
 # OpenAI API key setup
-openai.api_key = "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"
+openai.api_key = ""
 
 @app.route('/get-answer', methods=['POST'])
 def get_answer():
